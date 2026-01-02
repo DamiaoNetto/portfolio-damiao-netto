@@ -5,7 +5,7 @@ import CardsTecnologias from "./components/CardsSkills";
 import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
 import { Contact } from "./components/Contact";
-import { Footer } from "./components/footer";
+import { Footer } from "./components/Footer";
 
 const App = () =>{
   return(
