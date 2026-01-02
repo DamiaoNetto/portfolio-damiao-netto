@@ -14,8 +14,11 @@ const Navbar = () => {
 
       sections.forEach((section) => {
         const sectionTop = section.offsetTop;
-        // ajusta o threshold se precisar (200px funciona bem para nav fixa)
-        if (scrollPos >= sectionTop - 200) {
+        const sectionHeight = section.offsetHeight;
+        if (
+          scrollPos >= sectionTop - 200 &&
+          scrollPos < sectionTop + sectionHeight - 200
+        ) {
           current = section.id;
         }
       });
@@ -41,37 +44,52 @@ const Navbar = () => {
   };
 
   return (
-    <nav
-      aria-label="Main Navigation"
-      className="fixed top-0 w-full py-2 z-50  backdrop-blur-sm border-b border-[#41a0be]/30 shadow-[0_2px_15px_#41a0be] transition-all"
-    >
-      <div className="container mx-auto flex items-center justify-between px-6 py-3 ">
-        <div className="h-15 w-15 overflow-hidden flex items-center justify-center cursor-pointer">
-          <img
-            src={logo}
-            alt="Logo"
-            className="object-cover scale-250 transition-transform duration-300"
-          />
-        </div>
+   <nav
+  aria-label="Main Navigation"
+  className="fixed top-0 w-full py-1.5 z-50 bg-transparent backdrop-blur-sm border-b border-[#41a0be]/30 shadow-[0_1px_10px_#41a0be] transition-all"
+>
+  <div className="container mx-auto flex items-center justify-between px-4 py-2">
+    <div className="h-10 w-10 flex items-center justify-center cursor-pointer">
+      <img
+        src={logo}
+        alt="Logo"
+        href="home"
+        className="object-cover scale-150 transition-transform duration-300"
+      />
+    </div>
 
-        <ul className="hidden md:flex items-center space-x-8 text-white text-sm font-semibold uppercase">
-          {navItems.map((item) => (
-            <li key={item.id}>
-              <a
-                href={`#${item.id}`}
-                onClick={(e) => handleClick(e, item.id)}
-                className={`hover:text-cyan-500 cursor-pointer transition-colors ${
-                  activeSection === item.id ? "text-cyan-500" : ""
-                }`}
-                aria-current={activeSection === item.id ? "page" : undefined}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    </nav>
+    <ul className="hidden md:flex items-center space-x-6 text-white text-xs font-semibold uppercase">
+      {navItems.map((item) => (
+        <li key={item.id}>
+          {item.id === "contact" ? (
+            <button
+              onClick={(e) => handleClick(e, item.id)}
+              className={`px-3 py-1.5 rounded-full border transition-all ${
+                activeSection === item.id
+                  ? "bg-[#41a0be] text-white border-[#41a0be]"
+                  : "border-[#41a0be] text-[#41a0be] hover:bg-[#41a0be] hover:text-white"
+              }`}
+            >
+              {item.label}
+            </button>
+          ) : (
+            <a
+              href={`#${item.id}`}
+              onClick={(e) => handleClick(e, item.id)}
+              className={`hover:text-cyan-500 cursor-pointer transition-colors ${
+                activeSection === item.id ? "text-[#41a0be]" : ""
+              }`}
+              aria-current={activeSection === item.id ? "page" : undefined}
+            >
+              {item.label}
+            </a>
+          )}
+        </li>
+      ))}
+    </ul>
+  </div>
+</nav>
+
   );
 };
 

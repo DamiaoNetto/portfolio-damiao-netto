@@ -1,122 +1,9 @@
-import React, { useState, useEffect } from "react";
-import {
-  FaAngular,
-  FaBootstrap,
-  FaCss3Alt,
-  FaFacebook,
-  FaHtml5,
-  FaJs,
-  FaNodeJs,
-  FaReact,
-  FaSass,
-} from "react-icons/fa";
-import {BsWhatsapp } from "react-icons/bs";
-import { LiaLinkedin } from "react-icons/lia";
-import { ImInstagram } from "react-icons/im";
-import { MdEmail, MdOutlineSettingsApplications } from "react-icons/md";
-import { PiPhone } from "react-icons/pi";
-import { CiLocationArrow1 } from "react-icons/ci";
-import {
-  SiC,
-  SiCplusplus,
-  SiExpress,
-  SiFigma,
-  SiFirebase,
-  SiGit,
-  SiGithub,
-  SiJavascript,
-  SiMongodb,
-  SiMysql,
-  SiNetlify,
-  SiPostgresql,
-  SiPostman,
-  SiRedux,
-  SiSpring,
-  SiTypescript,
-  SiVercel,
-} from "react-icons/si";
-import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
-import {
-  GiMaterialsScience,
-  GiNorthStarShuriken,
-  GiSandsOfTime,
-} from "react-icons/gi";
-import { DiJava, DiPython, DiVisualstudio } from "react-icons/di";
-import { TbBrandCSharp } from "react-icons/tb";
-import { IoIosStarOutline } from "react-icons/io";
-export const skillsData = [
-  {
-    title: "Frontend",
-    skills: [
-      { name: "HTML", icon: <FaHtml5 className="text-orange-500" /> },
-      { name: "CSS", icon: <FaCss3Alt className="text-blue-500" /> },
-      { name: "SASS", icon: <FaSass className="text-pink-400" /> },
-      { name: "JavaScript", icon: <FaJs className="text-yellow-400" /> },
-      { name: "React JS", icon: <FaReact className="text-cyan-400" /> },
-      { name: "Angular", icon: <FaAngular className="text-red-500" /> },
-      { name: "Redux", icon: <SiRedux className="text-purple-500" /> },
-      { name: "Next JS", icon: <RiNextjsFill className="text-white" /> },
-      {
-        name: "Tailwind CSS",
-        icon: <RiTailwindCssFill className="text-teal-400" />,
-      },
-      {
-        name: "GSAP",
-        icon: <MdOutlineSettingsApplications className="text-green-500" />,
-      },
-      {
-        name: "Material UI",
-        icon: <GiMaterialsScience className="text-blue-400" />,
-      },
-      { name: "Bootstrap", icon: <FaBootstrap className="text-purple-600" /> },
-    ],
-  },
-  {
-    title: "Backend",
-    skills: [
-      { name: "Spring Boot", icon: <SiSpring className="text-green-600" /> },
-      { name: "Node JS", icon: <FaNodeJs className="text-green-400" /> },
-      { name: "Express JS", icon: <SiExpress className="text-gray-300" /> },
-      { name: "MySQL", icon: <SiMysql className="text-blue-400" /> },
-      { name: "MongoDB", icon: <SiMongodb className="text-green-500" /> },
-      { name: "Firebase", icon: <SiFirebase className="text-yellow-500" /> },
-      { name: "PostgreSQL", icon: <SiPostgresql className="text-sky-500" /> },
-    ],
-  },
-  {
-    title: "Languages",
-    skills: [
-      { name: "C", icon: <SiC className="text-blue-400" /> },
-      { name: "C++", icon: <SiCplusplus className="text-blue-500" /> },
-      { name: "Java", icon: <DiJava className="text-red-600" /> },
-      { name: "Python", icon: <DiPython className="text-yellow-400" /> },
-      { name: "C#", icon: <TbBrandCSharp className="text-purple-400" /> },
-      {
-        name: "JavaScript",
-        icon: <SiJavascript className="text-yellow-400" />,
-      },
-      { name: "TypeScript", icon: <SiTypescript className="text-blue-400" /> },
-    ],
-  },
-  {
-    title: "Tools",
-    skills: [
-      { name: "Git", icon: <SiGit className="text-orange-500" /> },
-      { name: "GitHub", icon: <SiGithub className="text-white" /> },
-      { name: "VS Code", icon: <DiVisualstudio className="text-blue-500" /> },
-      { name: "Postman", icon: <SiPostman className="text-orange-400" /> },
-      { name: "Vercel", icon: <SiVercel className="text-white" /> },
-      { name: "Netlify", icon: <SiNetlify className="text-teal-400" /> },
-      { name: "Figma", icon: <SiFigma className="text-pink-500" /> },
-    ],
-  },
-];
-
-// Navigation data
+// Navigation dat
 export const navItems = [
+  { id: "home", label: "" },
   { id: "about", label: "Sobre" },
-  { id: "skills", label: "Habilidades" },
-  { id: "portfolio", label: "Projetos" },
+  { id: "cardSkills", label: "Habilidades" },
+  { id: "projects", label: "Projetos" },
   { id: "testimonials", label: "Depoimentos" },
   { id: "contact", label: "Contatos" },
 ];
@@ -124,82 +11,71 @@ export const navItems = [
 // Testimonials data
 export const testimonials = [
   {
-    name: "Sarah Johnson",
-    position: "CEO, TechStart",
+    name: "Ana Ribeiro",
+    position: "Fundadora, TechLab",
     content:
-      '"Imam delivered exceptional work on our website redesign. His attention to detail and communication throughout the project was impressive."',
+      "“O Damião entregou um trabalho excepcional no redesign do nosso site. A atenção aos detalhes e a comunicação durante todo o processo foram incríveis.”",
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=687&q=80",
   },
   {
-    name: "Michael Chen",
-    position: "Product Manager, InnovateCo",
+    name: "Felipe Rocha",
+    position: "CEO, StartUp Hub",
     content:
-      '"Working with Imam was a great experience. He transformed our complex requirements into a beautiful, user-friendly interface."',
+      "“Trabalhar com o Damião foi uma ótima experiência. Ele conseguiu transformar nossos requisitos complexos em uma interface bonita e fácil de usar.”",
     image:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=687&q=80",
   },
   {
-    name: "David Wilson",
-    position: "Founder, StartupHub",
+    name: "João Pedro",
+    position: "Gerente de Produto",
     content:
-      '"Imam\'s technical skills and creative design solutions helped us create an engaging platform that our users love. Highly recommended!"',
+      "“As habilidades técnicas e o olhar criativo do Damião ajudaram nossa equipe a criar uma plataforma envolvente que nossos usuários adoram. Super recomendo!”",
     image:
-      "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80",
+      "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=687&q=80",
   },
 ];
 
 // Portfolio data
-export const portfolioItems = [
+export const projectsItems = [
   {
-    title: "E-commerce Website",
-    category: "Web Design",
-    image:
-      "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    titulo: "Livros Vai na Web",
+    tecnologias: "React | Flask",
+    imagem:"src/assets/livros_vnw.png",
+    link:"https://desafio-livros-vnw-wine.vercel.app/",
   },
   {
-    title: "Fitness App UI",
-    category: "UI/UX Design",
-    image:
-      "https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80",
+    titulo: "Jogo da Velha",
+    tecnologias: "HTML | CSS | Javascript",
+    imagem:"src/assets/jogo_da_velha.png",
+    link:"https://desafio-livros-vnw-wine.vercel.app/",
+
+    },
+
+  {
+    titulo: "Médicos Solidários",
+    tecnologias: "React | Vite | SCSS",
+    imagem:"src/assets/projeto-medicos-solidario.png",
+    link:"https://projeto-medicos-solidarios.vercel.app/"
+  
   },
   {
-    title: "Analytics Dashboard",
-    category: "Web Development",
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1115&q=80",
+    titulo: "Portfolio",
+    tecnologias: "HTML | CSS | Javascript",
+    imagem:"src/assets/page_dn.png",
+    link:"https://portifolio-sandy-gamma.vercel.app/",
   },
-];
-export const experiences = [
+ 
   {
-    id: 1,
-    company: "Webverse Digital",
-    logo: <GiSandsOfTime />, // replace with actual logo
-    title: "Fullstack Developer",
-    period: "April 2024 - Present",
-    description:
-      "Developed dynamic and scalable web applications using the MERN stack, handling both frontend and backend development. Collaborated with cross-functional teams to build responsive UI, implement RESTful APIs, and optimize application performance in an agile environment.",
-    skills: [
-      "HTML",
-      "CSS",
-      "JavaScript",
-      "React JS",
-      "TypeScript",
-      "Node JS",
-      "Tailwind CSS",
-      "MongoDB",
-      "Redux",
-      "Next JS",
-    ],
+    titulo: "",
+    tecnologias: "",
+    imagem:"",
   },
   {
-    id: 2,
-    company: "Agumentik Group of Companies",
-    logo: <IoIosStarOutline />, // replace with actual logo
-    title: "Fullstack Engineer",
-    period: "July 2023 - March 2024",
-    description:
-      "Contributed to innovative projects as a Fullstack Engineer, leading both frontend and backend development using modern technologies.",
-    skills: ["React JS", "Node JS", "Express", "MongoDB"],
+    titulo: "",
+    tecnologias: "",
+    imagem:
+      "",
   },
+  
 ];

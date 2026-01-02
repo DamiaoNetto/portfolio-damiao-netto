@@ -45,7 +45,7 @@ export const TituloAnimado = () => {
 
   return (
     <div className="text-center md:text-start">
-      <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
+      <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
         <span className="text-outline pb-1">{currentText}</span>
         <span className="inline-block h-7 md:h-14 w-0.5 bg-cyan-500 ml-1 animate-pulse"></span>
       </h2>

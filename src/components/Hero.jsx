@@ -6,20 +6,22 @@ import { ImInstagram } from "react-icons/im";
 import { FaGithub } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
 
-import Imagem from "../assets/ft.png";
 import curriculo from "../assets/curriculo_damiao_netto.pdf";
 
 const Hero = () => {
   return (
     <Fragment>
-      <section className="relative min-h-screen flex items-center justify-center pt-16 pb-20">
-        <div className="absolute inset-0 bg-black/90 bg-center bg-cover bg-no-repeat"></div>
+      <section  className="relative min-h-screen flex items-center justify-center pt-16 pb-20">
+       <div
+  className="absolute inset-0 bg-center bg-cover bg-no-repeat brightness-75"
+  style={{ backgroundImage: "url('src/assets/background-hero.jpg')" }}
+></div>
 
         <div className="absolute inset-0"></div>
 
         <div className="relative z-10 container mx-auto px-6 flex flex-col md:flex-row items-center">
           <div className="flex-1 text-center md:text-left">
-            <h1 className="text-6xl md:text-7xl capitalize tracking-wide text-[#41a0be]">
+            <h1  className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mt-6 capitalize tracking-wide text-[#41a0be]">
               Damiao Netto
             </h1>
             <TituloAnimado />
@@ -88,13 +90,13 @@ const Hero = () => {
               </a>
             </div>
           </div>
-          <div className="flex justify-center items-center ">
+          {/* <div className="flex justify-center items-center ">
             <img
               src={Imagem}
               alt="Damião Netto"
               className="rounded-2xl w-full max-w-xl"
             />
-          </div>
+          </div> */}
         </div>
       </section>
     </Fragment>
