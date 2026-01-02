@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { navItems } from "../data/data";
 import logo from "../assets/logo_DN.png";
 
-const Navbar = () => {
+export default function Navbar() {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
@@ -93,4 +93,3 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;

@@ -7,7 +7,7 @@ import { IoLocateSharp } from 'react-icons/io5'
 import { MdEmail } from 'react-icons/md'
 import { PiPhone } from 'react-icons/pi'
 
-export const Contact = () => {
+export default function Contact (){
   const {
     register,
     handleSubmit,

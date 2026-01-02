@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { projectsItems } from "../data/data";
 
-export const Projects = () => {
+export default function Projects(){
   const [visibleCount, setVisibleCount] = useState(3);
 
   const handleToggle = () => {
@@ -68,4 +68,3 @@ export const Projects = () => {
   );
 };
 
-export default Projects;

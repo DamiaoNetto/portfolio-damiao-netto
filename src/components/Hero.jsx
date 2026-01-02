@@ -8,7 +8,7 @@ import { FaDownload } from "react-icons/fa";
 
 import curriculo from "../assets/curriculo_damiao_netto.pdf";
 
-const Hero = () => {
+export default function Hero(){
   return (
     <Fragment>
       <section  className="relative min-h-screen flex items-center justify-center pt-16 pb-20">
@@ -103,4 +103,3 @@ const Hero = () => {
   );
 };
 
-export default Hero;

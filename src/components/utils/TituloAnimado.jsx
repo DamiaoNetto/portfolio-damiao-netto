@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export const TituloAnimado = () => {
+export default function TituloAnimado(){
   const roles = [
     {title: "Web Developer" },
     {title: "Front-End Developer" },
@@ -53,4 +53,3 @@ export const TituloAnimado = () => {
   );
 };
 
-export default TituloAnimado;

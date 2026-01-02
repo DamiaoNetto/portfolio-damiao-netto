@@ -83,7 +83,7 @@ const Navegacao = ({ setCategoriaSelecionada, categoriaSelecionada }) => {
   );
 };
 
-const CardsTecnologias = () => {
+export default function CardsTecnologias () {
   const [categoriaSelecionada, setCategoriaSelecionada] = useState("Frontend");
 
   return (
@@ -115,4 +115,3 @@ const CardsTecnologias = () => {
   );
 };
 
-export default CardsTecnologias;

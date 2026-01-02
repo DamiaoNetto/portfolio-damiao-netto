@@ -1,7 +1,7 @@
 import React from "react";
 import ImagemAbout from "../assets/Design sem nome (8).png";
 
-export const About = () => {
+export default function About() {
   return (
     <section id="about"   className="min-h-screen flex items-center justify-center px-6 bg-black/90 text-white scroll-mt-20"
 >

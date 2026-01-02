@@ -2,7 +2,7 @@ import React from 'react'
 import { testimonials } from '../data/data'
 import { IoIosStar } from 'react-icons/io'
 
-export const Testimonials = () => {
+export default function Testimonials(){
 
   
   return (
@@ -39,5 +39,3 @@ export const Testimonials = () => {
     </section>
   )
 }
-
-export default Testimonials;
