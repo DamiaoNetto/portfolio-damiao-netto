@@ -1,8 +1,8 @@
 import Navbar from "./components/Navbar"
 import  Hero from "./components/Hero"
 import { About } from "./components/About";
-import CardsTecnologias from "./components/cardsSkills";
-import Projects from "./components/projects";
+import CardsTecnologias from "./components/CardsSkills";
+import Projects from "./components/Projects";
 import Testimonials from "./components/Testimonials";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/footer";
