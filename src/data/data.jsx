@@ -1,3 +1,8 @@
+import livrosVnw from "../assets/livros_vnw.png";
+import jogoVelha from "../assets/jogo_da_velha.png";
+import medicos from "../assets/projeto-medicos-solidario.png";
+import portfolio from "../assets/page_dn.png";
+
 // Navigation dat
 export const navItems = [
   { id: "home", label: "" },
@@ -41,41 +46,25 @@ export const projectsItems = [
   {
     titulo: "Livros Vai na Web",
     tecnologias: "React | Flask",
-    imagem:"src/assets/livros_vnw.png",
-    link:"https://desafio-livros-vnw-wine.vercel.app/",
+    imagem: livrosVnw,
+    link: "https://desafio-livros-vnw-wine.vercel.app/",
   },
   {
     titulo: "Jogo da Velha",
     tecnologias: "HTML | CSS | Javascript",
-    imagem:"src/assets/jogo_da_velha.png",
-    link:"https://desafio-livros-vnw-wine.vercel.app/",
-
-    },
-
+    imagem: jogoVelha,
+    link: "https://desafio-livros-vnw-wine.vercel.app/",
+  },
   {
     titulo: "Médicos Solidários",
     tecnologias: "React | Vite | SCSS",
-    imagem:"src/assets/projeto-medicos-solidario.png",
-    link:"https://projeto-medicos-solidarios.vercel.app/"
-  
+    imagem: medicos,
+    link: "https://projeto-medicos-solidarios.vercel.app/",
   },
   {
     titulo: "Portfolio",
     tecnologias: "HTML | CSS | Javascript",
-    imagem:"src/assets/page_dn.png",
-    link:"https://portifolio-sandy-gamma.vercel.app/",
+    imagem: portfolio,
+    link: "https://portifolio-sandy-gamma.vercel.app/",
   },
- 
-  {
-    titulo: "",
-    tecnologias: "",
-    imagem:"",
-  },
-  {
-    titulo: "",
-    tecnologias: "",
-    imagem:
-      "",
-  },
-  
 ];
