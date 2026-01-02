@@ -5,6 +5,8 @@ import { LiaLinkedin } from "react-icons/lia";
 import { ImInstagram } from "react-icons/im";
 import { FaGithub } from "react-icons/fa";
 import { FaDownload } from "react-icons/fa";
+import backgroundHero from "../assets/background-hero.jpg";
+
 
 import curriculo from "../assets/curriculo_damiao_netto.pdf";
 
@@ -14,7 +16,7 @@ export default function Hero(){
       <section  className="relative min-h-screen flex items-center justify-center pt-16 pb-20">
        <div
   className="absolute inset-0 bg-center bg-cover bg-no-repeat brightness-75"
-  style={{ backgroundImage: "url('src/assets/background-hero.jpg')" }}
+          style={{ backgroundImage: `url(${backgroundHero})` }}
 ></div>
 
         <div className="absolute inset-0"></div>
