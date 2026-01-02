@@ -1,16 +1,38 @@
-# React + Vite
+# 💼 Portfólio – Damião Netto
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Portfólio pessoal desenvolvido em **React** com **Vite**, com foco em **front-end**, **design responsivo** e **performance**.  
+O projeto apresenta habilidades técnicas, projetos e informações profissionais por meio de um layout moderno, limpo e otimizado para diferentes dispositivos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## React Compiler
+- React.js
+- Vite
+- Tailwind CSS
+- JavaScript (ES6+)
+- HTML5
+- CSS3
+- React Icons
+- Git & GitHub
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🎯 Funcionalidades
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Layout totalmente responsivo
+- Componentes reutilizáveis
+- Design moderno e acessível
+- Seções de apresentação, projetos, habilidades e contato
+- Integração com links externos (GitHub, LinkedIn e projetos)
+- Código organizado e de fácil manutenção
+
+---
+
+## ▶️ Como Executar o Projeto
+
+```bash
+git clone https://github.com/DamiaoNetto/portfolio-damiao-netto.git
+cd portfolio-damiao-netto
+npm install
+npm run dev
