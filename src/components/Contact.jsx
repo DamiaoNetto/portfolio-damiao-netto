@@ -1,33 +1,33 @@
-import React from 'react'
-import { useForm } from 'react-hook-form'
-import { BsWhatsapp } from 'react-icons/bs'
-import { FaGithub } from 'react-icons/fa'
-import { ImInstagram } from 'react-icons/im'
-import { IoLocateSharp } from 'react-icons/io5'
-import { MdEmail } from 'react-icons/md'
-import { PiPhone } from 'react-icons/pi'
+import React from "react";
+import { useForm } from "react-hook-form";
+import { BsWhatsapp } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
+import { ImInstagram } from "react-icons/im";
+import { IoLocateSharp } from "react-icons/io5";
+import { MdEmail } from "react-icons/md";
+import { PiPhone } from "react-icons/pi";
 
-export default function Contact (){
+export default function Contact() {
   const {
     register,
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm()
+  } = useForm();
 
   const onSubmit = (data) => {
-    const { nome, email, assunto, mensagem } = data
+    const { nome, email, assunto, mensagem } = data;
     const texto = `*Nova mensagem pelo portfólio* 💻
 👤 *Nome:* ${nome}
 📧 *E-mail:* ${email}
 📝 *Assunto:* ${assunto}
-💬 *Mensagem:* ${mensagem}`
+💬 *Mensagem:* ${mensagem}`;
 
-    const numero = '5584999259170' 
-    const link = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`
-    window.open(link, '_blank')
-    reset()
-  }
+    const numero = "5584999259170";
+    const link = `https://wa.me/${numero}?text=${encodeURIComponent(texto)}`;
+    window.open(link, "_blank");
+    reset();
+  };
 
   return (
     <section id="contact" className="py-32 px-6 bg-black/90">
@@ -37,13 +37,14 @@ export default function Contact (){
         </h2>
 
         <p className="text-gray-400 text-center mb-12">
-          Conheça um pouco mais sobre minha trajetória, motivações e experiências.
+          Conheça um pouco mais sobre minha trajetória, motivações e
+          experiências.
         </p>
 
         <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 grid grid-cols-1 lg:grid-cols-2 gap-12 border border-white/20">
           {/* Lado esquerdo - informações */}
           <div>
-            <h3 className="text-xl font-semibold mb-6 text-white">
+            <h3 className="text-xl font-semibold mb-6 text-white text-center lg:text-left">
               Detalhes de Contato
             </h3>
 
@@ -81,8 +82,10 @@ export default function Contact (){
 
             {/* Rdes sociais */}
             <div className="mt-8">
-              <h4 className="text-white font-semibold mb-4">Siga-me</h4>
-              <div className="flex gap-4">
+              <h4 className="text-white font-semibold mb-4 text-left lg:text-left">
+                Siga-me
+              </h4>
+              <div className="flex gap-4  lg:justify-start">
                 <a
                   href="https://www.instagram.com/nettosousa96/"
                   target="_blank"
@@ -115,51 +118,65 @@ export default function Contact (){
           <div>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
               <div>
-                <label className="block mb-2 text-sm text-slate-300">Nome</label>
+                <label className="block mb-2 text-sm text-slate-300">
+                  Nome
+                </label>
                 <input
-                  {...register('nome', { required: 'Informe seu nome' })}
+                  {...register("nome", { required: "Informe seu nome" })}
                   type="text"
                   className="w-full px-4 py-2 bg-white/10 rounded-lg border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-[#41a0be] transition-all"
                 />
                 {errors.nome && (
-                  <p className="text-red-400 text-sm mt-1">{errors.nome.message}</p>
+                  <p className="text-red-400 text-sm mt-1">
+                    {errors.nome.message}
+                  </p>
                 )}
               </div>
 
               <div>
-                <label className="block mb-2 text-sm text-slate-300">E-mail</label>
+                <label className="block mb-2 text-sm text-slate-300">
+                  E-mail
+                </label>
                 <input
-                  {...register('email', {
-                    required: 'Informe seu e-mail',
+                  {...register("email", {
+                    required: "Informe seu e-mail",
                     pattern: {
                       value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-                      message: 'E-mail inválido',
+                      message: "E-mail inválido",
                     },
                   })}
                   type="email"
                   className="w-full px-4 py-2 bg-white/10 rounded-lg border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-[#41a0be] transition-all"
                 />
                 {errors.email && (
-                  <p className="text-red-400 text-sm mt-1">{errors.email.message}</p>
+                  <p className="text-red-400 text-sm mt-1">
+                    {errors.email.message}
+                  </p>
                 )}
               </div>
 
               <div>
-                <label className="block mb-2 text-sm text-slate-300">Assunto</label>
+                <label className="block mb-2 text-sm text-slate-300">
+                  Assunto
+                </label>
                 <input
-                  {...register('assunto', { required: 'Informe o assunto' })}
+                  {...register("assunto", { required: "Informe o assunto" })}
                   type="text"
                   className="w-full px-4 py-2 bg-white/10 rounded-lg border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-[#41a0be] transition-all"
                 />
                 {errors.assunto && (
-                  <p className="text-red-400 text-sm mt-1">{errors.assunto.message}</p>
+                  <p className="text-red-400 text-sm mt-1">
+                    {errors.assunto.message}
+                  </p>
                 )}
               </div>
 
               <div>
-                <label className="block mb-2 text-sm text-slate-300">Mensagem</label>
+                <label className="block mb-2 text-sm text-slate-300">
+                  Mensagem
+                </label>
                 <textarea
-                  {...register('mensagem', { required: 'Digite sua mensagem' })}
+                  {...register("mensagem", { required: "Digite sua mensagem" })}
                   rows="5"
                   className="w-full px-4 py-2 bg-white/10 rounded-lg border border-white/20 text-white focus:outline-none focus:ring-2 focus:ring-[#41a0be] transition-all"
                 ></textarea>
@@ -172,7 +189,7 @@ export default function Contact (){
 
               <button
                 type="submit"
-                className="flex items-center justify-center gap-2 px-6 py-2 rounded-full bg-[#41a0be] text-white font-semibold hover:bg-[#2a7c97] transition-all"
+                className="flex items-center justify-center gap-2 px-6 py-2 rounded-full bg-[#41a0be] text-white font-semibold hover:bg-[#2a7c97] hover:scale-105 transition-all mx-auto"
               >
                 <BsWhatsapp className="text-lg" />
                 Enviar Mensagem
@@ -182,5 +199,5 @@ export default function Contact (){
         </div>
       </div>
     </section>
-  )
+  );
 }

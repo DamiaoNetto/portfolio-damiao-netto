@@ -1,10 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-export default function TituloAnimado(){
-  const roles = [
-    {title: "Web Developer" },
-    {title: "Front-End Developer" },
-  ];
+export default function TituloAnimado() {
+  const roles = [{ title: "Web Developer" }, { title: "Front-End Developer" }];
 
   const [currentRoleIndex, setCurrIndex] = useState(0);
   const [currentText, setCurText] = useState("");
@@ -51,5 +48,4 @@ export default function TituloAnimado(){
       </h2>
     </div>
   );
-};
-
+}

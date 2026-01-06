@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { projectsItems } from "../data/data";
 
-export default function Projects(){
+export default function Projects() {
   const [visibleCount, setVisibleCount] = useState(3);
 
   const handleToggle = () => {
@@ -13,11 +13,17 @@ export default function Projects(){
   };
 
   return (
-    <section id="projects" className="min-h-screen bg-black/90 text-white text-center flex flex-col items-center justify-center scroll-mt-15">
+    <section
+      id="projects"
+      className="min-h-screen bg-black/90 text-white text-center flex flex-col items-center justify-center scroll-mt-15"
+    >
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-[#41a0be] mb-2 mt-10">Projetos</h2>
+        <h2 className="text-3xl font-bold text-[#41a0be] mb-2 mt-10">
+          Projetos
+        </h2>
         <p className="text-gray-400 mb-10">
-          Estes são alguns dos trabalhos que desenvolvi com foco em resultado e qualidade.
+          Estes são alguns dos trabalhos que desenvolvi com foco em resultado e
+          qualidade.
         </p>
 
         {/* Grid de projetos */}
@@ -34,11 +40,11 @@ export default function Projects(){
                 rel="noopener noreferrer"
                 className="block"
               >
-                <div className="h-48 overflow-hidden cursor-pointer">
+                <div className="h-48 overflow-hidden cursor-pointer flex items-center justify-center bg-black/20">
                   <img
                     src={item.imagem}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                     alt={item.titulo}
+                    className="max-w-full max-h-full object-contain transition-transform duration-500 hover:scale-101"
                   />
                 </div>
               </a>
@@ -66,5 +72,4 @@ export default function Projects(){
       </div>
     </section>
   );
-};
-
+}
